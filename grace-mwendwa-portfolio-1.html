@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grace Mwendwa | Operations & Digital Systems Professional</title>
+  <meta name="description" content="Grace Mwendwa — Director of Operations, Cybersecurity Professional, and Digital Systems enthusiast based in Nairobi, Kenya. Open to global opportunities."/>
+  <meta property="og:title" content="Grace Mwendwa | Operations & Digital Systems Professional"/>
+  <meta property="og:description" content="Director of Operations · Cybersecurity Professional · Digital Innovator — Nairobi, Kenya"/>
+  <meta property="og:image" content="grace.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:#F7F3EC; --bg2:#EDE8DF; --bg3:#E4DDD3; --surface:#FFFFFF;
+      --dark:#1C1A16; --mid:#4A4540; --light-text:#7A7570;
+      --accent:#2D6A4F; --accent2:#52B788; --warm:#8B6340; --warm2:#C49A6C;
+      --border:#D9D3C8; --shadow:rgba(28,26,22,0.08); --nav-bg:rgba(247,243,236,0.95);
+    }
+    @media(prefers-color-scheme:dark){
+      :root:not([data-theme="light"]){
+        --bg:#141210;--bg2:#1C1A16;--bg3:#242118;--surface:#2A2720;
+        --dark:#F0EBE3;--mid:#B8B0A6;--accent:#52B788;--accent2:#74C69D;
+        --warm:#C49A6C;--warm2:#D4AA80;--border:#3A3730;
+        --shadow:rgba(0,0,0,0.3);--nav-bg:rgba(20,18,16,0.95);
+      }
+    }
+    [data-theme="dark"]{
+      --bg:#141210;--bg2:#1C1A16;--bg3:#242118;--surface:#2A2720;
+      --dark:#F0EBE3;--mid:#B8B0A6;--accent:#52B788;--accent2:#74C69D;
+      --warm:#C49A6C;--warm2:#D4AA80;--border:#3A3730;
+      --shadow:rgba(0,0,0,0.3);--nav-bg:rgba(20,18,16,0.95);
+    }
+    [data-theme="light"]{
+      --bg:#F7F3EC;--bg2:#EDE8DF;--bg3:#E4DDD3;--surface:#FFFFFF;
+      --dark:#1C1A16;--mid:#4A4540;--accent:#2D6A4F;--accent2:#52B788;
+      --warm:#8B6340;--warm2:#C49A6C;--border:#D9D3C8;
+      --shadow:rgba(28,26,22,0.08);--nav-bg:rgba(247,243,236,0.95);
+    }
+
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--dark); font-size:16px; line-height:1.7; transition:background 0.3s,color 0.3s; }
+
+    /* ── NAV ── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:1rem 4rem; background:var(--nav-bg);
+      backdrop-filter:blur(12px); border-bottom:1px solid var(--border);
+      transition:background 0.3s;
+    }
+    .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--dark); text-decoration:none; letter-spacing:0.02em; }
+    .nav-right { display:flex; align-items:center; gap:2rem; }
+    .nav-links { display:flex; gap:1.8rem; list-style:none; align-items:center; }
+    .nav-links a {
+      text-decoration:none; color:var(--mid); font-size:0.76rem; font-weight:500;
+      letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s;
+      position:relative; padding-bottom:4px;
+    }
+    .nav-links a::after {
+      content:''; position:absolute; bottom:0; left:0;
+      width:0; height:2px; background:var(--accent);
+      border-radius:2px; transition:width 0.25s ease;
+    }
+    .nav-links a:hover { color:var(--accent); }
+    .nav-links a:hover::after { width:100%; }
+    .theme-toggle {
+      background:var(--surface); border:1px solid var(--border);
+      border-radius:100px; padding:0.32rem 0.85rem; cursor:pointer;
+      font-size:0.78rem; color:var(--mid); display:flex; align-items:center;
+      gap:0.4rem; transition:all 0.2s; white-space:nowrap; flex-shrink:0;
+    }
+    .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
+    .theme-toggle .toggle-icon { font-size:0.92rem; transition:transform 0.3s; }
+    .theme-toggle:hover .toggle-icon { transform:rotate(20deg); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .hamburger span { display:block; width:24px; height:2px; background:var(--dark); border-radius:2px; transition:all 0.3s; }
+    .mobile-menu {
+      display:none; position:fixed; top:62px; left:0; right:0; z-index:199;
+      background:var(--nav-bg); backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      padding:1.5rem 2rem; flex-direction:column; gap:1.2rem;
+    }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a {
+      text-decoration:none; color:var(--mid); font-size:0.88rem; font-weight:500;
+      letter-spacing:0.06em; text-transform:uppercase; padding:0.5rem 0;
+      border-bottom:1px solid var(--border); transition:color 0.2s;
+    }
+    .mobile-menu a:hover { color:var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height:100vh; display:grid; grid-template-columns:1fr 1fr;
+      align-items:center; padding:8rem 4rem 4rem; gap:4rem; background:var(--bg);
+    }
+    .hero-text { max-width:560px; }
+    .hero-eyebrow {
+      display:inline-block; font-size:0.72rem; font-weight:500;
+      letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);
+      margin-bottom:1.5rem; padding:0.35rem 1rem;
+      border:1px solid var(--accent2); border-radius:2rem;
+    }
+    .hero-name-row { display:flex; align-items:center; gap:2.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+    .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,5vw,4.8rem); font-weight:600; line-height:1.05; color:var(--dark); white-space:nowrap; }
+    .hero h1 span { color:var(--accent); }
+    .hero-photo {
+      width:180px; height:180px; object-fit:cover; object-position:center top;
+      border-radius:50%; flex-shrink:0;
+      border:3px solid var(--bg2);
+      box-shadow:0 8px 32px var(--shadow);
+    }
+    .hero-tagline { font-size:0.9rem; color:var(--warm2); font-weight:500; margin-bottom:1.2rem; font-style:italic; }
+    .hero-sub { font-size:0.98rem; color:var(--mid); margin-bottom:1.8rem; line-height:1.85; font-weight:300; }
+    .hero-fact {
+      display:flex; align-items:flex-start; gap:0.8rem;
+      padding:1rem 1.2rem; background:var(--bg2);
+      border-left:3px solid var(--warm2); border-radius:0 8px 8px 0;
+      margin-bottom:2rem; font-size:0.87rem; color:var(--mid); font-style:italic; line-height:1.6;
+    }
+    .hero-fact-icon { font-size:1.1rem; flex-shrink:0; margin-top:0.1rem; }
+    .hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+    .btn-primary { display:inline-block; padding:0.75rem 1.6rem; background:var(--accent); color:white; text-decoration:none; border-radius:6px; font-size:0.84rem; font-weight:500; transition:background 0.2s,transform 0.2s; }
+    .btn-primary:hover { background:var(--accent2); transform:translateY(-2px); }
+    .btn-secondary { display:inline-block; padding:0.75rem 1.6rem; border:1.5px solid var(--dark); color:var(--dark); text-decoration:none; border-radius:6px; font-size:0.84rem; font-weight:500; transition:all 0.2s; }
+    .btn-secondary:hover { background:var(--dark); color:var(--bg); transform:translateY(-2px); }
+    .btn-outline { display:inline-block; padding:0.75rem 1.6rem; border:1.5px solid var(--accent); color:var(--accent); text-decoration:none; border-radius:6px; font-size:0.84rem; font-weight:500; transition:all 0.2s; }
+    .btn-outline:hover { background:var(--accent); color:white; transform:translateY(-2px); }
+    .location-badge { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.78rem; color:var(--mid); padding:0.4rem 0.9rem; background:var(--bg2); border-radius:2rem; border:1px solid var(--border); }
+    .hero-visual { display:flex; flex-direction:column; gap:1.2rem; align-items:flex-end; }
+    .hero-card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:1.4rem 1.8rem; width:100%; max-width:340px; box-shadow:0 4px 20px var(--shadow); transition:transform 0.3s,box-shadow 0.3s; }
+    .hero-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px var(--shadow); }
+    .card-icon { font-size:1.5rem; margin-bottom:0.5rem; }
+    .card-label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); font-weight:500; margin-bottom:0.3rem; }
+    .card-value { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; color:var(--dark); }
+    .card-sub { font-size:0.8rem; color:var(--mid); margin-top:0.2rem; }
+
+    /* ── SECTIONS ── */
+    section { padding:6rem 4rem; }
+    .section-alt { background:var(--bg2); }
+    .section-label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.18em; color:var(--accent); font-weight:500; margin-bottom:0.8rem; }
+    .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem,3.5vw,3rem); font-weight:600; color:var(--dark); margin-bottom:1rem; line-height:1.2; }
+    .section-intro { font-size:0.97rem; color:var(--mid); max-width:600px; line-height:1.85; margin-bottom:3rem; font-weight:300; }
+    .divider { width:3rem; height:2px; background:var(--accent2); margin:1rem 0 2rem; }
+
+    /* ── GCGO ── */
+    .gcgo-banner {
+      background:linear-gradient(135deg,var(--accent) 0%,#1a4d38 100%);
+      color:white; padding:4rem;
+      display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;
+    }
+    .gcgo-banner h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:600; margin-bottom:1rem; }
+    .gcgo-banner p { font-size:0.95rem; line-height:1.85; opacity:0.9; font-weight:300; }
+    .gcgo-sdg { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:14px; padding:2rem; text-align:center; }
+    .gcgo-sdg-num { font-family:'Cormorant Garamond',serif; font-size:4rem; font-weight:700; line-height:1; margin-bottom:0.5rem; opacity:0.7; }
+    .gcgo-sdg-label { font-size:0.8rem; text-transform:uppercase; letter-spacing:0.12em; opacity:0.8; }
+    .gcgo-sdg-title { font-size:1.1rem; font-weight:500; margin-top:0.5rem; }
+
+    /* ── ABOUT ── */
+    .about-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:5rem; align-items:start; }
+    .about-body { font-size:0.97rem; color:var(--mid); line-height:1.9; }
+    .about-body p { margin-bottom:1.2rem; }
+    .about-body strong { color:var(--dark); font-weight:500; }
+
+    /* About photo strip */
+    .about-photo-strip { display:flex; gap:1rem; margin-top:2rem; margin-bottom:0; }
+    .about-photo-strip img {
+      width:calc(50% - 0.5rem); aspect-ratio:3/4; object-fit:cover;
+      border-radius:10px; filter:grayscale(20%);
+      transition:filter 0.3s,transform 0.3s;
+    }
+    .about-photo-strip img:hover { filter:grayscale(0%); transform:scale(1.02); }
+
+    .passions-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.7rem; margin-top:1.5rem; }
+    .passion-tag {
+      display:flex; align-items:center; gap:0.5rem;
+      padding:0.65rem 0.9rem; background:var(--surface);
+      border:1px solid var(--border); border-radius:8px;
+      font-size:0.82rem; color:var(--mid); cursor:pointer;
+      transition:transform 0.2s,border-color 0.2s,color 0.2s,box-shadow 0.2s;
+      text-decoration:none;
+    }
+    .passion-tag:hover { transform:translateY(-2px) scale(1.03); border-color:var(--accent); color:var(--accent); box-shadow:0 4px 12px var(--shadow); }
+    .skills-block { margin-bottom:1.8rem; }
+    .skills-block h3 { font-size:0.74rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--warm2); font-weight:500; margin-bottom:0.7rem; }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .skill-tag { padding:0.38rem 0.85rem; background:var(--surface); border:1px solid var(--border); border-radius:100px; font-size:0.8rem; color:var(--dark); }
+
+    /* ── SPECIALIZATION ── */
+    .spec-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:3rem; }
+    .spec-card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:2rem; transition:transform 0.2s,box-shadow 0.2s; }
+    .spec-card:hover { transform:translateY(-4px); box-shadow:0 10px 30px var(--shadow); }
+    .spec-card.featured { border-color:var(--accent); background:linear-gradient(135deg,var(--bg2),var(--surface)); }
+    .spec-icon { font-size:2rem; margin-bottom:1rem; }
+    .spec-label { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--accent); font-weight:500; margin-bottom:0.4rem; }
+    .spec-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--dark); margin-bottom:0.6rem; }
+    .spec-desc { font-size:0.84rem; color:var(--mid); line-height:1.7; }
+    .insight-list { list-style:none; display:flex; flex-direction:column; gap:1rem; }
+    .insight-item { display:flex; gap:1rem; padding:1.2rem 1.5rem; background:var(--surface); border:1px solid var(--border); border-radius:10px; align-items:flex-start; transition:transform 0.2s; }
+    .insight-item:hover { transform:translateX(4px); }
+    .insight-num { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; color:var(--accent2); line-height:1; flex-shrink:0; min-width:2rem; opacity:0.6; }
+    .insight-text { font-size:0.9rem; color:var(--mid); line-height:1.7; }
+    .insight-text strong { color:var(--dark); font-weight:500; }
+
+    /* ── PORTFOLIO ── */
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.6rem; }
+    .project-card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:1.8rem; transition:transform 0.2s,box-shadow 0.2s; display:flex; flex-direction:column; }
+    .project-card:hover { transform:translateY(-4px); box-shadow:0 10px 30px var(--shadow); }
+    .project-category { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--accent); font-weight:500; margin-bottom:0.5rem; }
+    .project-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--dark); margin-bottom:0.7rem; line-height:1.3; }
+    .project-desc { font-size:0.86rem; color:var(--mid); line-height:1.75; margin-bottom:1.1rem; flex-grow:1; }
+    .project-impact { font-size:0.8rem; color:var(--accent); font-weight:500; margin-bottom:1rem; padding:0.55rem 0.85rem; background:rgba(82,183,136,0.1); border-radius:6px; border-left:3px solid var(--accent2); }
+    .project-tools { display:flex; flex-wrap:wrap; gap:0.45rem; }
+    .project-tool { font-size:0.72rem; padding:0.25rem 0.7rem; background:var(--bg2); border-radius:100px; color:var(--mid); border:1px solid var(--border); }
+
+    /* ── TIMELINE ── */
+    .timeline { position:relative; padding-left:2rem; }
+    .timeline::before { content:''; position:absolute; left:0; top:0.6rem; bottom:0; width:1px; background:var(--border); }
+    .timeline-item { position:relative; margin-bottom:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--border); }
+    .timeline-item:last-child { border-bottom:none; margin-bottom:0; }
+    .timeline-dot { position:absolute; left:-2.35rem; top:0.4rem; width:10px; height:10px; background:var(--accent); border-radius:50%; border:2px solid var(--bg); box-shadow:0 0 0 2px var(--accent); }
+    .timeline-meta { display:flex; align-items:center; gap:0.8rem; margin-bottom:0.4rem; flex-wrap:wrap; }
+    .timeline-date { font-size:0.75rem; color:var(--accent); font-weight:500; text-transform:uppercase; letter-spacing:0.08em; }
+    .timeline-badge { font-size:0.7rem; padding:0.15rem 0.65rem; border-radius:2rem; background:var(--bg2); color:var(--mid); border:1px solid var(--border); }
+    .timeline-item h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--dark); margin-bottom:0.15rem; }
+    .timeline-org { font-size:0.85rem; color:var(--warm2); font-weight:500; margin-bottom:0.7rem; }
+    .timeline-desc { font-size:0.9rem; color:var(--mid); line-height:1.8; }
+
+    /* ── CERTS ── */
+    .certs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.4rem; }
+    .cert-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1.6rem; transition:transform 0.2s,box-shadow 0.2s; }
+    .cert-card:hover { transform:translateY(-4px); box-shadow:0 8px 24px var(--shadow); }
+    .cert-org { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--accent); font-weight:500; margin-bottom:0.4rem; }
+    .cert-name { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; color:var(--dark); margin-bottom:0.5rem; line-height:1.3; }
+    .cert-desc { font-size:0.82rem; color:var(--mid); line-height:1.65; margin-bottom:0.8rem; }
+    .cert-status { display:inline-block; font-size:0.7rem; padding:0.18rem 0.65rem; border-radius:2rem; font-weight:500; }
+    .cert-status.complete { background:rgba(45,106,79,0.12); color:var(--accent); }
+    .cert-status.progress { background:rgba(196,154,108,0.15); color:var(--warm); }
+    .cert-link { display:inline-block; margin-top:0.8rem; font-size:0.8rem; color:var(--accent); text-decoration:none; font-weight:500; transition:color 0.2s; }
+    .cert-link:hover { color:var(--accent2); }
+
+    /* ── ELEVATOR PITCH ── */
+    .pitch-container { max-width:780px; margin:0 auto; }
+    .pitch-video-placeholder { background:var(--surface); border:2px dashed var(--border); border-radius:16px; padding:5rem 3rem; margin-bottom:2rem; text-align:center; transition:border-color 0.2s; }
+    .pitch-video-placeholder:hover { border-color:var(--accent2); }
+    .pitch-play-icon { width:72px; height:72px; background:var(--bg2); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:1.8rem; }
+    .pitch-placeholder-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; color:var(--dark); margin-bottom:0.8rem; }
+    .pitch-placeholder-text { font-size:0.93rem; color:var(--mid); line-height:1.8; max-width:480px; margin:0 auto; }
+    .pitch-points { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+    .pitch-point { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.4rem; transition:transform 0.2s,box-shadow 0.2s; }
+    .pitch-point:hover { transform:translateY(-3px); box-shadow:0 6px 20px var(--shadow); }
+    .pitch-point-icon { font-size:1.3rem; margin-bottom:0.5rem; }
+    .pitch-point-label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); font-weight:500; margin-bottom:0.3rem; }
+    .pitch-point-text { font-size:0.86rem; color:var(--mid); line-height:1.6; }
+
+    /* ── CONTACT ── */
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+    .contact-body { font-size:0.97rem; color:var(--mid); line-height:1.9; font-weight:300; }
+    .contact-body p { margin-bottom:1.2rem; }
+    .contact-body strong { color:var(--dark); font-weight:500; }
+    .contact-links { display:flex; flex-direction:column; gap:0.9rem; }
+    .contact-link { display:flex; align-items:center; gap:1rem; padding:1.1rem 1.4rem; background:var(--surface); border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--dark); transition:all 0.2s; }
+    .contact-link:hover { border-color:var(--accent); transform:translateX(4px); box-shadow:0 4px 16px var(--shadow); }
+    .contact-link-icon { font-size:1.2rem; flex-shrink:0; }
+    .contact-link-label { font-size:0.7rem; color:var(--mid); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.1rem; }
+    .contact-link-value { font-size:0.9rem; font-weight:500; color:var(--dark); }
+    .global-note { padding:1.4rem; border-radius:10px; font-size:0.87rem; color:var(--mid); line-height:1.7; margin-top:1.5rem; background:rgba(82,183,136,0.08); border:1px solid rgba(82,183,136,0.3); }
+    .global-note strong { color:var(--accent); }
+
+    /* ── FOOTER ── */
+    footer { padding:2.5rem 4rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border); font-size:0.8rem; color:var(--mid); background:var(--bg2); }
+    footer .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--dark); font-weight:600; }
+    footer .footer-links { display:flex; gap:1.5rem; }
+    footer .footer-links a { color:var(--mid); text-decoration:none; font-size:0.78rem; transition:color 0.2s; }
+    footer .footer-links a:hover { color:var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){ nav{padding:1rem 2rem;} .hero{padding:7rem 2rem 3rem;gap:3rem;} section{padding:5rem 2rem;} .gcgo-banner{padding:3rem 2rem;} .spec-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:768px){
+      .nav-links{display:none;} .hamburger{display:flex;}
+      .hero{grid-template-columns:1fr;min-height:auto;padding:6rem 1.5rem 3rem;}
+      .hero-text{max-width:100%;} .hero-visual{align-items:stretch;} .hero-card{max-width:100%;}
+      .hero-name-row{gap:1.5rem;} .hero-photo{width:140px;height:140px;}
+      .gcgo-banner{grid-template-columns:1fr;} .about-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .spec-grid{grid-template-columns:1fr;} .contact-grid{grid-template-columns:1fr;gap:2rem;}
+      .pitch-points{grid-template-columns:1fr;} footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem 2rem;}
+      section{padding:4rem 1.5rem;} .gcgo-banner{padding:3rem 1.5rem;}
+      .about-photo-strip img{width:calc(50% - 0.5rem);}
+    }
+    @media(max-width:480px){
+      .hero h1{font-size:2.5rem;white-space:normal;} .hero-name-row{flex-direction:column;align-items:flex-start;}
+      .hero-ctas{flex-direction:column;} .btn-primary,.btn-secondary,.btn-outline{text-align:center;}
+      .passions-grid{grid-template-columns:1fr;} .projects-grid{grid-template-columns:1fr;} .certs-grid{grid-template-columns:1fr;}
+      .about-photo-strip{flex-direction:column;} .about-photo-strip img{width:100%;}
+      .footer-links{flex-wrap:wrap;justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#home" class="nav-logo">Grace Mwendwa</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#specialization">Specialization</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#pitch">Elevator Pitch</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="toggle-icon">🌙</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#specialization" onclick="toggleMenu()">Specialization</a>
+    <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+    <a href="#experience" onclick="toggleMenu()">Experience</a>
+    <a href="#certifications" onclick="toggleMenu()">Certifications</a>
+    <a href="#pitch" onclick="toggleMenu()">Elevator Pitch</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Operations · Technology · Impact</span>
+      <div class="hero-name-row">
+        <h1>Grace <span>Mwendwa</span></h1>
+        <img src="grace.png" alt="Grace Mwendwa" class="hero-photo"/>
+      </div>
+      <p class="hero-tagline">Operations Director · Cybersecurity Professional · Digital Innovator</p>
+      <p class="hero-sub">Passionate about education, technology, and creating systems that positively impact communities. Building skills in cybersecurity while exploring how secure digital systems can support schools, organisations, and future innovation across Africa and beyond.</p>
+      <div class="hero-fact">
+        <span class="hero-fact-icon">✨</span>
+        <span>Beyond technology, I am a self-taught painter and arts & crafts enthusiast with a love for philosophy, mythology, and spirituality — I believe curiosity and creativity are the most underrated professional skills.</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#about" class="btn-primary">About Me</a>
+        <a href="#portfolio" class="btn-secondary">Portfolio</a>
+        <a href="#pitch" class="btn-outline">Elevator Pitch</a>
+      </div>
+      <div class="location-badge">📍 Nairobi, Kenya &nbsp;·&nbsp; Open to Global Opportunities</div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="card-icon">🏫</div>
+        <div class="card-label">Current Role</div>
+        <div class="card-value">Director of Operations</div>
+        <div class="card-sub">Waterfords Golden Hearts School · Nairobi</div>
+      </div>
+      <div class="hero-card">
+        <div class="card-icon">💻</div>
+        <div class="card-label">Background</div>
+        <div class="card-value">Software Implementation & Ops</div>
+        <div class="card-sub">Former Impl. Consultant · Sybyl Kenya</div>
+      </div>
+      <div class="hero-card">
+        <div class="card-icon">🔐</div>
+        <div class="card-label">Specialization</div>
+        <div class="card-value">Cybersecurity</div>
+        <div class="card-sub">ALX Professional Programme · Completing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GCGO -->
+  <div class="gcgo-banner">
+    <div>
+      <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;opacity:0.7;margin-bottom:0.8rem;">My Global Challenge & Global Opportunity</div>
+      <h2>Quality Education for All</h2>
+      <p>Education is the area where I am most actively practising my impact. Every day I work to ensure that children in Nairobi have access to a structured, enriching, and safe learning environment. I believe quality education is not a privilege — it is the foundation of everything. It is how individuals break cycles, communities grow, and nations develop.</p>
+    </div>
+    <div class="gcgo-sdg">
+      <div class="gcgo-sdg-num">4</div>
+      <div class="gcgo-sdg-label">UN Sustainable Development Goal</div>
+      <div class="gcgo-sdg-title">Quality Education</div>
+      <div style="margin-top:1.2rem;font-size:0.83rem;opacity:0.8;line-height:1.6;">Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="section-title">Multi-disciplinary.<br/>Mission-driven.</div>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div>
+        <div class="about-body">
+          <p>I'm Grace Mwendwa — an operations and technology professional passionate about <strong>education, community impact, and building systems that create real change</strong>. My career path has been anything but linear, and I believe that's my greatest strength.</p>
+          <p>After studying <strong>International Business Administration at USIU-Africa</strong>, I moved into tech through a software implementation role at Sybyl Kenya — deploying ERP systems across schools and SMEs. That technical grounding now informs how I lead operations at <strong>Waterfords Golden Hearts School</strong>, where every decision is in service of creating a better learning environment for children.</p>
+          <p>I am currently <strong>building my skills in cybersecurity</strong>, exploring how secure digital systems can support schools, organisations, and future innovation across Africa. I believe technology should not only solve problems — it should create opportunities and improve access to knowledge and resources.</p>
+          <p>What makes me unique is my ability to <strong>combine creativity, systems thinking, and a strong interest in community-centred solutions</strong>. Beyond technology, I explore philosophy, mythology, and spirituality — interests that deeply influence how I think about leadership, creativity, and long-term impact.</p>
+          <p>As I continue growing professionally, I aspire to build a career in cybersecurity where I can help organisations and communities <strong>protect their digital systems while contributing to meaningful, sustainable progress</strong> — in Kenya and globally.</p>
+        </div>
+        <!-- Artistic photo strip -->
+        <div class="about-photo-strip">
+          <img src="grace-photo2.jpg" alt="Grace Mwendwa"/>
+          <img src="grace-photo3.jpg" alt="Grace Mwendwa"/>
+        </div>
+      </div>
+      <div>
+        <div class="section-label" style="margin-top:0">Interests & Passions</div>
+        <div class="passions-grid">
+          <a href="#" class="passion-tag">♻️ Sustainability</a>
+          <a href="#" class="passion-tag">📚 Education</a>
+          <a href="#" class="passion-tag">💡 Technology</a>
+          <a href="#" class="passion-tag">🌾 Agriculture</a>
+          <a href="#" class="passion-tag">🎨 Visual Arts</a>
+          <a href="#" class="passion-tag">✂️ Arts & Crafts</a>
+          <a href="#" class="passion-tag">🖌️ Painting</a>
+          <a href="#" class="passion-tag">🔐 Cybersecurity</a>
+          <a href="#" class="passion-tag">🏛️ Philosophy</a>
+          <a href="#" class="passion-tag">🌀 Mythology</a>
+          <a href="#" class="passion-tag">🌍 Global Affairs</a>
+          <a href="#" class="passion-tag">🌙 Spirituality</a>
+        </div>
+        <div style="margin-top:2rem;">
+          <div class="section-label">Core Skills</div>
+          <div class="skills-block">
+            <h3>Operations & Leadership</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Operations Management</span><span class="skill-tag">Change Management</span>
+              <span class="skill-tag">Process Improvement</span><span class="skill-tag">Team Leadership</span>
+              <span class="skill-tag">Budget Management</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <h3>Technology</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">ERP Systems (Odoo)</span><span class="skill-tag">Data Migration</span>
+              <span class="skill-tag">UAT Coordination</span><span class="skill-tag">Cybersecurity Foundations</span>
+              <span class="skill-tag">Web Development</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <h3>Business & Communication</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">International Business</span><span class="skill-tag">Stakeholder Engagement</span>
+              <span class="skill-tag">Partnership Management</span><span class="skill-tag">Financial Reporting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIZATION -->
+  <section id="specialization" class="section-alt">
+    <div class="section-label">Career Focus</div>
+    <div class="section-title">My Specialization</div>
+    <div class="divider"></div>
+    <p class="section-intro">My chosen specialization is Cybersecurity — a field that directly enables my mission of protecting people, institutions, and communities in an increasingly digital world.</p>
+    <div class="spec-grid">
+      <div class="spec-card featured">
+        <div class="spec-icon">🔐</div>
+        <div class="spec-label">Primary Specialization</div>
+        <div class="spec-title">Cybersecurity</div>
+        <p class="spec-desc">Cybersecurity is where my technical background, operations experience, and passion for protecting communities converge. In education especially, data security and digital safety are critical — and often overlooked. I am building expertise to bridge that gap.</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🏗️</div>
+        <div class="spec-label">Applied Through</div>
+        <div class="spec-title">Operations & Systems</div>
+        <p class="spec-desc">My operations background gives me a unique lens — I understand how institutions actually function, where vulnerabilities live, and how to implement secure systems that people will actually use.</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🎯</div>
+        <div class="spec-label">Ideal Role</div>
+        <div class="spec-title">Cybersecurity Operations Analyst</div>
+        <p class="spec-desc">A role combining institutional operations experience with cybersecurity knowledge to protect organisations, manage digital risk, and support secure technology adoption — particularly in education or social impact sectors.</p>
+      </div>
+    </div>
+    <div class="section-label" style="margin-top:1rem;">Expert Insights from My Field</div>
+    <div class="section-title" style="font-size:1.6rem;margin-bottom:1.5rem;">What the Experts Say About Success in Cybersecurity</div>
+    <ul class="insight-list">
+      <li class="insight-item"><span class="insight-num">01</span><div class="insight-text"><strong>Build a T-shaped skill set.</strong> The most effective cybersecurity professionals have broad foundational knowledge and deep expertise in at least one area. For operations professionals entering the field, existing domain knowledge is a significant advantage — pair it with technical depth.</div></li>
+      <li class="insight-item"><span class="insight-num">02</span><div class="insight-text"><strong>Communication is as important as technical skill.</strong> The ability to translate complex security risks into business language — for boards, executives, and non-technical staff — is what separates good analysts from great ones. Operations experience is a direct pipeline to this skill.</div></li>
+      <li class="insight-item"><span class="insight-num">03</span><div class="insight-text"><strong>Stay current and curious — the field never stops moving.</strong> Cybersecurity evolves daily. Successful professionals maintain a habit of continuous learning: following threat intelligence, earning progressive certifications, and participating in communities. Curiosity is not optional — it is the job.</div></li>
+    </ul>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="section-label">Portfolio</div>
+    <div class="section-title">Projects & Work</div>
+    <div class="divider"></div>
+    <p class="section-intro">A selection of projects spanning software implementation, institutional operations, and community development — each one a story of problem-solving in action.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-category">System Migration · Education Tech</div>
+        <div class="project-title">ERP Migration: Odoo to Ed360</div>
+        <p class="project-desc">Led the full transition of Waterfords Golden Hearts School's management system from Odoo to Ed360 — reducing operational costs while maintaining bank-integrated fee collection. Managed vendor coordination, data integrity, and staff onboarding.</p>
+        <div class="project-impact">💡 Reduced system costs; maintained payment integrations; improved usability</div>
+        <div class="project-tools"><span class="project-tool">Ed360</span><span class="project-tool">Odoo</span><span class="project-tool">Change Management</span><span class="project-tool">Bank Integration</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-category">Organisational Development · Operations</div>
+        <div class="project-title">Institutional Systems & Staff Structure Development</div>
+        <p class="project-desc">Designing and rolling out operational frameworks for staff in phased transitions — creating lasting structures that ensure continuity, accountability, and clarity of roles for long-term institutional growth.</p>
+        <div class="project-impact">💡 Improved staff clarity; structured workflows adopted across departments</div>
+        <div class="project-tools"><span class="project-tool">Process Design</span><span class="project-tool">Org Development</span><span class="project-tool">Change Management</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-category">Programme Management · Student Welfare</div>
+        <div class="project-title">Student Enrichment Programme Revival</div>
+        <p class="project-desc">Spearheading the reintroduction of clubs, sporting activities, and educational trips — coordinating logistics, permissions, budgets, and scheduling to restore a holistic school experience.</p>
+        <div class="project-impact">💡 Active clubs and sports programme reinstated; improved learner engagement</div>
+        <div class="project-tools"><span class="project-tool">Programme Management</span><span class="project-tool">Budget Coordination</span><span class="project-tool">Stakeholder Management</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-category">Records & Data Management</div>
+        <div class="project-title">Student Records Digitisation</div>
+        <p class="project-desc">Digitised and securely managed over 200 student records, implementing data protection measures and structured retrieval systems that significantly reduced administrative processing time.</p>
+        <div class="project-impact">💡 67% reduction in retrieval time; strengthened data protection</div>
+        <div class="project-tools"><span class="project-tool">Data Management</span><span class="project-tool">Digital Systems</span><span class="project-tool">Data Protection</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-category">Software Implementation · Sybyl Kenya</div>
+        <div class="project-title">Multi-Client ERP Rollout, Migration & Version Upgrades</div>
+        <p class="project-desc">Facilitated end-to-end system deployments and version migrations across 6 schools and 3 SMEs. Managed Odoo migrations from v11→v13 and v11→v15 for schools, and v11→v15 for SMEs. Conducted 150+ user training sessions and coordinated UAT, go-live, and post-implementation support.</p>
+        <div class="project-impact">💡 9 successful client go-lives; 20% reduction in security risk through training</div>
+        <div class="project-tools"><span class="project-tool">Data Migration</span><span class="project-tool">UAT</span><span class="project-tool">Odoo v11→v15</span><span class="project-tool">Client Training</span><span class="project-tool">Version Upgrades</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-category">Web Development · Personal</div>
+        <div class="project-title">Personal Portfolio Website</div>
+        <p class="project-desc">Designed and published this personal portfolio using HTML, CSS, and GitHub Pages — applying She Codes web development skills and self-directed learning to present professional experience to a global audience.</p>
+        <div class="project-impact">💡 Live portfolio site — accessible globally via GitHub Pages</div>
+        <div class="project-tools"><span class="project-tool">HTML/CSS</span><span class="project-tool">GitHub Pages</span><span class="project-tool">Responsive Design</span><span class="project-tool">Dark Mode</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section-alt">
+    <div class="section-label">Career Journey</div>
+    <div class="section-title">Experience</div>
+    <div class="divider"></div>
+    <p class="section-intro">A path built on curiosity, adaptability, and a commitment to making systems — and people — work better.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta"><span class="timeline-date">Jan 2026 – Present</span><span class="timeline-badge">Current</span></div>
+        <h3>Director of Operations</h3>
+        <div class="timeline-org">Waterfords Golden Hearts School · Nairobi, Kenya</div>
+        <p class="timeline-desc">Leading institutional operations across administration, staff coordination, resource management, and strategic planning. Overseeing monthly financial operations and compliance across a $10,000+ budget. Digitised 200+ student records reducing retrieval time by 67%. Managing NGO partnerships for resource provision and infrastructure support. Reintroducing student enrichment programmes and implementing phased staff structural frameworks.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta"><span class="timeline-date">May 2023 – Dec 2025</span></div>
+        <h3>School Manager / Administrator</h3>
+        <div class="timeline-org">Waterfords Golden Hearts School · Nairobi, Kenya</div>
+        <p class="timeline-desc">Managed administrative and operational functions including scheduling, records management, stakeholder communications, staff recruitment, and compliance. Coordinated digital literacy training for staff. Built and maintained a secure digital and physical information management system that laid the foundation for promotion to Director of Operations.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta"><span class="timeline-date">Oct 2021 – Apr 2023 · 1yr 7mo</span></div>
+        <h3>Junior Software Implementation Consultant</h3>
+        <div class="timeline-org">Sybyl Kenya Limited · Nairobi, Kenya</div>
+        <p class="timeline-desc">Provided technical support and troubleshooting for Odoo ERP systems across education and other sectors. Conducted 150+ user training sessions on secure system use, increasing adoption and reducing security risks by 20%. Facilitated data migration, UAT, live server acceptance, and post-implementation support across 6 schools and 3 SMEs.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta"><span class="timeline-date">Jan 2020 – Mar 2020</span><span class="timeline-badge">Internship</span></div>
+        <h3>Accounts Intern</h3>
+        <div class="timeline-org">Kiige & Associates Limited · Nairobi, Kenya</div>
+        <p class="timeline-desc">Supported end-month financial reporting, accounts reconciliation, and data management. Assisted with invoice processing, credit checks, and audit exercises.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--warm2);box-shadow:0 0 0 2px var(--warm2);"></div>
+        <div class="timeline-meta"><span class="timeline-date">Jan 2016 – Sep 2020</span></div>
+        <h3>BSc. International Business Administration</h3>
+        <div class="timeline-org">United States International University – Africa (USIU-A) · Nairobi, Kenya</div>
+        <p class="timeline-desc">Concentration in Finance and Accounting. Global business principles, management strategy, cross-cultural communication, and economics.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--warm2);box-shadow:0 0 0 2px var(--warm2);"></div>
+        <div class="timeline-meta"><span class="timeline-date">2017 – 2019</span><span class="timeline-badge">Work-Study</span></div>
+        <h3>Student Assistant</h3>
+        <div class="timeline-org">USIU-Africa · Nairobi, Kenya</div>
+        <p class="timeline-desc">Part of the university work-study programme — supporting lecturers, course advisors, and the computer lab. Provided first-line technical support, managed confidential records, and coordinated university events.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--warm2);box-shadow:0 0 0 2px var(--warm2);"></div>
+        <div class="timeline-meta"><span class="timeline-date">2017 – 2019</span><span class="timeline-badge">Leadership</span></div>
+        <h3>Sports Association Committee — Welfare Rep & PR Officer</h3>
+        <div class="timeline-org">USIU-Africa · Nairobi, Kenya</div>
+        <p class="timeline-desc">Served on the sports association committee as Welfare Representative and PR Officer — advocating for student athletes, managing communications, and supporting sports programme visibility.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--warm2);box-shadow:0 0 0 2px var(--warm2);"></div>
+        <div class="timeline-meta"><span class="timeline-date">2017 – 2019</span><span class="timeline-badge">Leadership</span></div>
+        <h3>Team Manager — Women's Rugby Team</h3>
+        <div class="timeline-org">USIU-Africa · Nairobi, Kenya</div>
+        <p class="timeline-desc">Managed logistics, scheduling, team welfare, and coordination for the university women's rugby team. Developed strong leadership, organisational, and people management skills in a competitive sports environment.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--warm2);box-shadow:0 0 0 2px var(--warm2);"></div>
+        <div class="timeline-meta"><span class="timeline-date">2019</span><span class="timeline-badge">Volunteer</span></div>
+        <h3>Education Volunteer</h3>
+        <div class="timeline-org">Our Lady of Guadalupe Children's Home · Nairobi, Kenya</div>
+        <p class="timeline-desc">Supported children's education and personal development through teaching and mentorship — contributing to a nurturing environment for vulnerable youth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-label">Continuous Learning</div>
+    <div class="section-title">Certifications & Development</div>
+    <div class="divider"></div>
+    <p class="section-intro">I believe growth never stops. These programmes reflect my deliberate investment in staying current and expanding into emerging fields.</p>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-org">ALX Africa</div>
+        <div class="cert-name">Virtual Assistant</div>
+        <p class="cert-desc">Professional training in remote administrative support, digital tools, project coordination, and client management.</p>
+        <span class="cert-status complete">✓ Completed</span>
+        <!-- <a href="YOUR-CERTIFICATE-URL" target="_blank" class="cert-link">View Certificate →</a> -->
+      </div>
+      <div class="cert-card">
+        <div class="cert-org">She Codes</div>
+        <div class="cert-name">Web Development</div>
+        <p class="cert-desc">Introduction to web development fundamentals including HTML, CSS, and the foundations of building for the web.</p>
+        <span class="cert-status complete">✓ Completed</span>
+        <!-- <a href="YOUR-CERTIFICATE-URL" target="_blank" class="cert-link">View Certificate →</a> -->
+      </div>
+      <div class="cert-card">
+        <div class="cert-org">ALX Africa</div>
+        <div class="cert-name">Cybersecurity — Professional Foundations</div>
+        <p class="cert-desc">Comprehensive programme covering digital security principles, threat landscapes, risk management, and professional cybersecurity practices.</p>
+        <span class="cert-status progress">⏳ In Progress — Final Week</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-org">WERK · Complementary Schools Foundation</div>
+        <div class="cert-name">Leadership & Governance Training</div>
+        <p class="cert-desc">Personal leadership development programme covering governance, institutional leadership, and strategic management for school directors.</p>
+        <span class="cert-status progress">⏳ In Progress</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELEVATOR PITCH -->
+  <section id="pitch" class="section-alt">
+    <div class="section-label">Elevator Pitch</div>
+    <div class="section-title">In My Own Words</div>
+    <div class="divider"></div>
+    <div class="pitch-container">
+      <div class="pitch-video-placeholder">
+        <div class="pitch-play-icon">🎬</div>
+        <div class="pitch-placeholder-title">Video Coming Soon</div>
+        <p class="pitch-placeholder-text">My elevator pitch video will be uploaded here soon. In it, I share my professional journey, what drives me, and the value I bring to organisations navigating operations, technology, and change.</p>
+      </div>
+      <div class="pitch-points">
+        <div class="pitch-point">
+          <div class="pitch-point-icon">👩‍💼</div>
+          <div class="pitch-point-label">Who I Am</div>
+          <p class="pitch-point-text">An operations and digital systems professional with roots in software implementation, a passion for education, and growing expertise in cybersecurity.</p>
+        </div>
+        <div class="pitch-point">
+          <div class="pitch-point-icon">🛠️</div>
+          <div class="pitch-point-label">What I Do</div>
+          <p class="pitch-point-text">I bridge the gap between technology and operations — designing structures, managing transitions, securing systems, and building capacity in complex environments.</p>
+        </div>
+        <div class="pitch-point">
+          <div class="pitch-point-icon">🌍</div>
+          <div class="pitch-point-label">Where I'm Headed</div>
+          <p class="pitch-point-text">Actively pursuing global opportunities — particularly in Germany and the EU — where my cross-sector experience translates to high-impact roles in operations or cybersecurity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Let's Connect</div>
+    <div class="section-title">Get In Touch</div>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-body">
+          <p>I am <strong>open to international opportunities</strong> — particularly in Europe — where I can apply my cross-sector experience in operations, technology, and people management to meaningful work.</p>
+          <p>Whether you are looking for a detail-oriented operations leader, a cybersecurity enthusiast, exploring collaboration, or simply want to connect — I would love to hear from you.</p>
+          <p>You can also find my artwork on Instagram and TikTok — painting, arts & crafts, and creative expression are a big part of who I am beyond the professional world.</p>
+        </div>
+        <div class="global-note">🌍 <strong>Available for relocation</strong> — Actively pursuing global opportunities including positions in <strong>Germany and the EU</strong>, where my background in international business, tech, and operations translates directly to high-value roles.</div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:gracemwendwak@gmail.com" class="contact-link">
+          <span class="contact-link-icon">✉️</span>
+          <div><div class="contact-link-label">Email</div><div class="contact-link-value">gracemwendwak@gmail.com</div></div>
+        </a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-link">
+          <span class="contact-link-icon">💼</span>
+          <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-value">linkedin.com/in/your-profile</div></div>
+        </a>
+        <a href="https://github.com/your-username" target="_blank" class="contact-link">
+          <span class="contact-link-icon">🐙</span>
+          <div><div class="contact-link-label">GitHub</div><div class="contact-link-value">github.com/your-username</div></div>
+        </a>
+        <a href="https://instagram.com/your-art-handle" target="_blank" class="contact-link">
+          <span class="contact-link-icon">🎨</span>
+          <div><div class="contact-link-label">Instagram · Artwork</div><div class="contact-link-value">@your-art-handle</div></div>
+        </a>
+        <a href="https://tiktok.com/@your-art-handle" target="_blank" class="contact-link">
+          <span class="contact-link-icon">🎬</span>
+          <div><div class="contact-link-label">TikTok · Artwork</div><div class="contact-link-value">@your-art-handle</div></div>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">📍</span>
+          <div><div class="contact-link-label">Location</div><div class="contact-link-value">Nairobi, Kenya · Open to Relocation</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Grace Mwendwa</span>
+    <nav class="footer-links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#pitch">Elevator Pitch</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div>Operations · Technology · Impact · © 2026</div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+    const root = document.documentElement;
+    function applyTheme(isDark) {
+      root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      document.querySelectorAll('.theme-toggle').forEach(btn => {
+        const icon = btn.querySelector('.toggle-icon');
+        const label = btn.querySelector('.toggle-label');
+        if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+        if (label) label.textContent = isDark ? 'Light' : 'Dark';
+      });
+    }
+    function toggleTheme() {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+      applyTheme(!isDark);
+    }
+    (function() {
+      const saved = localStorage.getItem('theme');
+      applyTheme(saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+    })();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!localStorage.getItem('theme')) applyTheme(e.matches);
+    });
+  </script>
+</body>
+</html>
